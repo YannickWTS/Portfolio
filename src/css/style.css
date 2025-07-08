@@ -1,7 +1,15 @@
+/* Op mobiele schermen: disable fixed background */
+@media (max-width: 768px) {
+    html {
+        background-attachment: scroll;
+    }
+}
+
 html{
-    background: url(../img/achtergrond.png) no-repeat center center scroll;
+    background: url(../img/achtergrond.png) no-repeat center center fixed;
     background-size: cover;
 }
+
 
 body {
     font-family: Arial, sans-serif;

@@ -8,3 +8,25 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+# IntelliJ IDEA folders
+.idea/
+*.iml
+
+# Scratch files & internal junk
+scratches/
+extensions/
+shelf/
+.vscode/
+
+# Systeem-/cachebestanden
+.DS_Store
+Thumbs.db
+
+# Node/NPM (voor als je later JS-buildtools gebruikt)
+node_modules/
+dist/
+
+# Algemene log- en buildoutput
+*.log
+*.tmp
+*.bak

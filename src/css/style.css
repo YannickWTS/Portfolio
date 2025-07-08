@@ -1,5 +1,5 @@
 html{
-    background: url(../img/achtergrond.png) no-repeat center center fixed;
+    background: url(../img/achtergrond.png) no-repeat center center scroll;
     background-size: cover;
 }
 

@@ -1,7 +1,7 @@
 /* Op mobiele schermen: disable fixed background */
 @media (max-width: 768px) {
     html {
-        background-attachment: fixed !important;
+        background-attachment: scroll !important;
     }
 }
 

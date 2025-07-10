@@ -40,7 +40,7 @@ body {
 
 .container {
     text-align: center;
-    background: #2c2c2c41;
+    background: #2c2c2c7b;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
@@ -80,4 +80,12 @@ ul {
 
 h1 {
     font-family: Garamond, serif;
+}
+
+.bio {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    text-align: center;
+    line-height: 1.6;
 }

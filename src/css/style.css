@@ -88,3 +88,7 @@ h1 {
     text-align: center;
     line-height: 1.6;
 }
+
+header {
+    padding-top: 60px;
+}

@@ -17,13 +17,29 @@ body {
     z-index: 1;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    color: #f5f5f5;
-    min-height: 100vh;
-    position: relative;
-    z-index: 1;
-    background-color: black; /* fallback */
+@media (max-width: 768px) {
+    .container {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 15px;
+    }
+
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    header {
+        padding-top: 20px;
+    }
+
+    .bio {
+        padding: 5px 10px;
+    }
 }
 
 .container {

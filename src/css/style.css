@@ -17,32 +17,6 @@ body {
     z-index: 1;
 }
 
-@media (max-width: 768px) {
-    .container {
-        margin-left: 10px;
-        margin-right: 10px;
-        padding: 15px;
-    }
-
-    .profile-img {
-        max-width: 100%;
-        height: auto;
-    }
-
-
-    h1 {
-        font-size: 24px;
-    }
-
-    header {
-        padding-top: 20px;
-    }
-
-    .bio {
-        padding: 5px 10px;
-    }
-}
-
 .container {
     text-align: center;
     background: #2c2c2c7b;
@@ -99,4 +73,30 @@ h1 {
 
 header {
     padding-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 15px;
+    }
+
+    .profile-img {
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    h1 {
+        font-size: 24px;
+    }
+
+    header {
+        padding-top: 20px;
+    }
+
+    .bio {
+        padding: 5px 10px;
+    }
 }

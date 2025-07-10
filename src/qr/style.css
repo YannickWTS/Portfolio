@@ -1,0 +1,131 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: url('abstract-4745654_1920.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    margin: 0;
+}
+
+
+.container {
+    position: relative;
+    padding: 30px;
+    border-radius: 16px;
+    background: #ffffff;
+    z-index: 1;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+    display: flex;
+    gap: 40px;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #ff0080, #ff8c00, #ff0080);
+    background-size: 300% 300%;
+    animation: glow 6s ease infinite;
+}
+
+.qr-box {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.6); /* lichte gloed */
+    border: 2px dashed rgba(156, 179, 201, 0.7);
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 250px;
+}
+
+label {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+input {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    border-color: #0077cc;
+    outline: none;
+}
+
+button {
+    padding: 10px;
+    font-size: 1em;
+}
+
+@media print {
+    body {
+        background: white !important;
+    }
+
+    .printable {
+        margin: 50px auto;
+        padding: 20px;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        max-width: 500px;
+        box-shadow: none;
+        background: white;
+        display: flex;
+        gap: 20px;
+    }
+
+    .input-box button,
+    button {
+        display: none !important;
+    }
+
+    .input-box input {
+        border: none;
+        font-size: 1.2em;
+    }
+
+    .input-box label {
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .qr-box {
+        border: none;
+        background: transparent;
+        padding: 0;
+    }
+
+    .qr-box canvas {
+        width: 180px !important;
+        height: 180px !important;
+    }
+}
+
+@keyframes glow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}

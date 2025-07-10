@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>WiFi QR Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="qr-box">
+        <div id="qr">QR komt hier</div>
+    </div>
+    <div class="input-box">
+        <label for="ssid">Wifi-naam</label>
+        <input type="text" id="ssid" placeholder="Bijv. ThuisWifi">
+
+        <label for="password">Paswoord</label>
+        <input type="text" id="password" placeholder="Bijv. geheim123">
+
+        <button onclick="generateQR()">Genereer QR</button>
+        <button onclick="downloadQR()">Download (enkel QR)</button>
+        <button onclick="window.print()">Print (met data)</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

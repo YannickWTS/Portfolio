@@ -3,6 +3,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    overflow-x: hidden;
 }
 
 /* Achtergrond via pseudo-element */
@@ -19,10 +20,10 @@ body::before {
     pointer-events: none; /* zorgt dat klikken gewoon werkt */
 }
 
-/* Mobiele optimalisatie: geen fixed op mobiel */
+/* Mobiele optimalisatie*/
 @media (max-width: 768px) {
     body::before {
-        position: absolute; /* beweegt mee op mobiel */
+        position: fixed;
     }
 }
 

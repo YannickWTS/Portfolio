@@ -52,15 +52,12 @@ ul {
     text-decoration: underline;
 }
 
-.bio {
-    margin: 0;
-}
-
 h1 {
     font-family: Garamond, serif;
 }
 
 .bio {
+    font-family: 'Inter', sans-serif;
     max-width: 800px;
     margin: 0 auto;
     padding: 10px 20px;

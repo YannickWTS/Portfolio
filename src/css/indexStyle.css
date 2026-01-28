@@ -12,17 +12,17 @@ body {
     width: 100%;
     color: #f5f5f5;
     font-family: Arial, sans-serif;
+
 }
 
 .container {
     text-align: center;
     background: #2c2c2c7b;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin: 0 auto;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-    max-width: 1920px;
+    max-width: 1200px;
 }
 
 ul {
@@ -35,7 +35,9 @@ p {
     margin: 0 auto;
     padding: 10px 0;
     text-align: center;
+    font-size: 1.2rem;
 }
+
 
 
 .profile-img {
@@ -87,6 +89,11 @@ h1 {
     font-size: 36px;
 }
 
+h2 {
+    font-family: Arial, sans-serif;
+    font-size: 40px;
+}
+
 .bio {
     font-family: 'Inter', sans-serif;
     max-width: 800px;
@@ -104,22 +111,24 @@ header p {
     color: #ccc;
 }
 
-/* Downloadbare apps */
+
 .app-projects {
     max-width: 1000px;
     margin: 0 auto;
     padding: 10px 20px;
 }
 
-.app-grid {
-    display: grid;
-    grid-template-columns: 1fr;
+.app-grid{
+    display: flex;
+    justify-content: center;
     gap: 16px;
     margin-top: 10px;
 }
 
-.app-card {
-    text-align: left;
+/* Kaartbreedte */
+.app-card{
+    width: min(560px, 100%);
+    text-align: center;
     background: rgba(25, 25, 25, 0.55);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 14px;
@@ -127,10 +136,19 @@ header p {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
 }
 
+/* Als er 2 of meer kaarten zijn: netjes naast elkaar en gecentreerd */
+.app-grid:has(.app-card:nth-child(2)){
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 520px));
+    justify-content: center;
+    gap: 16px;
+}
+
+
 .app-card h3 {
     margin: 0 0 6px 0;
     font-size: 1.4rem;
-    font-family: Garamond, serif;
+    font-family: arial, sans-serif;
 }
 
 .app-subtitle {
@@ -143,30 +161,54 @@ header p {
     padding: 0;
     margin: 14px 0 10px 0;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 8px;
 }
 
 .app-tags li {
-    background: rgba(204, 200, 196, 0.95);
-    color: #000;
+    background: transparent;
+    color: #eaeaea;
+    border: 1px solid rgba(204, 200, 196, 0.65);
     border-radius: 999px;
-    padding: 6px 10px;
+    padding: 6px 12px;
     font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
 }
+
 
 .app-description {
     margin: 10px 0 14px 0;
     padding: 0;
-    text-align: left;
+    text-align: center;
 }
 
 .app-actions {
     display: flex;
+    justify-content: center;   /* <-- dit */
     gap: 10px;
     flex-wrap: wrap;
     margin-top: 10px;
 }
+
+.app-disclaimer {
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+
+.important-note{
+    margin: 12px auto 0 auto;
+    padding: 12px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: #f5f5f5;
+    line-height: 1.5;
+    max-width: 520px;
+}
+
 
 .btn {
     color: #000000;
@@ -221,12 +263,14 @@ header p {
 
 @media (min-width: 900px) {
     .app-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 520px));
+        justify-content: center;
     }
 }
 
 
-@media (max-width: 768px) {
+
+@media (max-width: 900px) {
     .container {
         margin-left: 10px;
         margin-right: 10px;
@@ -249,5 +293,11 @@ header p {
 
     .bio {
         padding: 5px 10px;
+    }
+}
+/* Op kleinere schermen met 2+ kaarten terug onder elkaar (maar nog steeds centered) */
+@media (max-width: 900px){
+    .app-grid:has(.app-card:nth-child(2)){
+        grid-template-columns: minmax(0, 560px);
     }
 }
